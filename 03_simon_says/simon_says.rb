@@ -68,7 +68,7 @@ def titleize(phrase)
 
 	#Find little words/Make sure first letter is lower case
 	while j < output.length do 
-		if output[j] != " " && (output[j].join("") == "And" || output[j].join("") == "The" || output[j].join("") == "To" || output[j].join("") == "Is")
+		if output[j] != " " && (output[j].join("") == "And" || output[j].join("") == "The" || output[j].join("") == "To" || output[j].join("") == "Is" || output[j].join("") == "Over")
 			if j == 0
 				output[j][0] = output[j][0].upcase
 			else
