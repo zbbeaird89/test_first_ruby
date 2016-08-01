@@ -7,10 +7,12 @@ def translate(string)
 		letters     = word.split("")
 		new_letters = new_words[i].split("")
 		letters.each do |letter| 
-			unless vowels.include?(letter)
+			test = vowels.include?(letter)
+			unless test
 				new_letters.rotate!
 			else
-				break
+				break if test && new_letters[new_letters.length - 1] != "q" 
+				new_letters.rotate!
 			end
 		end	
 		new_words[i] = new_letters.push("ay").join("")
